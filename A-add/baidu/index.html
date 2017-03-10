@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="关键词，关键词">
+    <meta name="description" content="对关键词的描述">
+    <title>仿站 - 百度微任务</title>
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <div class="top_text clearfix">
+            <p class="p1">百度众测地推精英，坐拥一域，手握重兵！</p>
+
+            <p class="login">
+                <a href="#">精英登陆</a>
+                <a href="#">资格申请</a>
+            </p>
+        </div>
+    </div>
+    <div class="pic_list">
+        <ul>
+            <li style="background-image:url(images/bg1.jpg);z-index:2;">
+                <div class="logo_img">
+                    <img src="images/title.png" alt=""/>
+                    <img src="images/home_desc.png" alt=""/>
+                </div>
+                <div class="download clearfix">
+                    <div class="btn">
+                        <a href="javascript:"><img src="images/android_icon.png"/>Android 版下载</a>
+                        <a href="javascript:"><img src="images/ios_icon.png"/>iOS 版下载</a>
+                    </div>
+                    <div class="link_img"></div>
+                </div>
+            </li>
+            <li style="background-image:url(images/bg2.png);"></li>
+            <li style="background-image:url(images/bg3.png);"></li>
+            <li style="background-image:url(images/bg4.png);"></li>
+        </ul>
+    </div>
+    <div class="move_btn">
+        <div class="line"></div>
+        <ul class="clearfix">
+            <li>
+                <img src="images/0.png"/>
+
+                <p style="color:#2a1fff;">首页</p>
+            </li>
+            <li>
+                <img src="images/nav1.png"/>
+
+                <p>微任务介绍</p>
+            </li>
+            <li>
+                <img src="images/nav2.png"/>
+
+                <p>精美礼品</p>
+            </li>
+            <li>
+                <img src="images/nav3.png"/>
+
+                <p>意见反馈</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>&copy;2014&nbsp;&nbsp;Baidu<span><a href="#">使用百度前必读</a><a href="#">京ICP证030173号</a></span><img
+                src="images/gs.gif"/></p>
+    </div>
+</div>
+</body>
+<script>
+    var img1 = ['images/nav0.png', 'images/nav1.png', 'images/nav2.png', 'images/nav3.png'];
+    var img2 = ['images/0.png', 'images/1.png', 'images/2.png', 'images/3.png'];
+    var j = 0;
+    var timer = null;
+
+    $('.logo_img').animate({'opacity': '1'}, 800);
+
+    $('.move_btn').find('li').each(function (i, e) {
+        $(this).on('click', this, function () {
+            imgFn();
+            $(this).find('p').css('color', '#2a1fff');
+            $(this).find('img').attr('src', img2[i]);
+            $('.pic_list').find('li').eq(j).css('z-index', '2');
+            if (i != j) {
+                if (i > j) {
+                    $('.pic_list').find('li').eq(i).css({'left': '100%', 'z-index': '2'});
+                    $('.pic_list').find('li').eq(i).animate({'left': 0}, 500);
+                    $('.pic_list').find('li').eq(j).animate({'left': '-100%'}, 500);
+                } else {
+                    $('.pic_list').find('li').eq(i).css({'left': '-100%', 'z-index': '2'});
+                    $('.pic_list').find('li').eq(i).animate({'left': 0}, 500);
+                    $('.pic_list').find('li').eq(j).animate({'left': '100%'}, 500);
+                }
+            }
+            $('.line').animate({'width': 150 * (i + 1)}, 500);
+            j = i;
+        });
+    });
+
+    doMove();
+
+    $('.box').hover(function () {
+        clearInterval(timer);
+    }, function () {
+        doMove();
+    });
+
+    function doMove() {
+        timer = setInterval(function () {
+            imgFn();
+            j++;
+            if (j == $('.pic_list').find('li').length) {
+                j = 0;
+            }
+            $('.pic_list').find('li').eq(j - 1).css('z-index', '2');
+            $('.pic_list').find('li').eq(j).css({'left': '100%', 'z-index': '2'});
+            $('.pic_list').find('li').eq(j).animate({'left': 0}, 500);
+            $('.pic_list').find('li').eq(j - 1).animate({'left': '-100%'}, 500);
+            $('.move_btn').find('li').eq(j).find('img').attr('src', img2[j]);
+            $('.line').animate({'width': 150 * (j + 1)}, 500);
+        }, 3500);
+    }
+    function imgFn() {
+        $('.pic_list').find('li').css('z-index', '1');
+        $('.move_btn').find('li').find('p').css('color', '#fff');
+        $('.move_btn').find('li').each(function (i, e) {
+            $(this).find('img').attr('src', img1[i]);
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,447 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Reset */
+body, h1, h2, h3, h4, h5, p, dl, dd, ul, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+body {
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+/* End CSS Reset */
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.GroupWrap {
+    width: 100%;
+    background: #c3182a;
+    position: relative;
+}
+
+.TitleImg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.TitleImg h1 {
+    width: 100%;
+    min-width: 1200px;
+    height: 1000px;
+    background: url(../img/sink/group_top.jpg) no-repeat center 0;
+}
+
+.SideNav {
+    width: 64px;
+    padding: 10px 0;
+    background: #fff;
+    position: fixed;
+    top: 40%;
+    left: -4px;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.SideNav a {
+    display: block;
+    color: #000;
+    line-height: 32px;
+    text-align: center;
+    text-indent: 4px;
+    font-weight: bold;
+}
+
+.SideNav a:hover, .SideNav a.active {
+    color: #df1c4a;
+}
+
+.GroupContent {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 24%;
+    position: relative;
+    z-index: 3;
+}
+
+.HotCar {
+    box-sizing: border-box;
+    width: 1200px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 12px 24px;
+}
+
+.HotCar a {
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin: 5px 6px;
+    padding: 0 6px;
+    color: #343434;
+}
+
+.HotCar a:hover {
+    background: #c72229;
+    color: #fff;
+}
+
+.GroupMian {
+    margin-top: 20px;
+    position: relative;
+}
+
+.CarBuying {
+    width: 930px;
+    padding-bottom: 30px;
+    float: left;
+}
+
+.CarList, .EnrollBuy {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.CarList {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.GroupTimeOut {
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    text-align: right;
+    color: #000;
+    z-index: 2;
+}
+
+.GroupTimeOut span {
+    background: #000;
+    color: #fff;
+    padding: 1px 3px;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+
+.CarImg {
+    width: 630px;
+    height: 302px;
+    float: left;
+    position: relative;
+}
+
+.GroupTime {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.GroupTime div {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.GroupTime p {
+    width: 50%;
+    text-indent: 16px;
+    overflow: hidden;
+    line-height: 60px;
+    color: #fff;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.GroupTime .CarOut {
+    left: 0;
+}
+
+.GroupTime .CarInner {
+    right: 0;
+}
+
+.BuyPep {
+    width: 300px;
+    height: 302px;
+    overflow: hidden;
+    float: right;
+}
+
+.CarLogo {
+    width: 100%;
+    text-align: center;
+}
+
+.CarLogo a {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 18px auto 10px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.CarLogo a img {
+    width: 100%;
+}
+
+.CarLogo p {
+    width: 270px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #adaaab;
+}
+
+.CarLogo p strong {
+    font-size: 20px;
+    font-weight: normal;
+    padding-right: 6px;
+}
+
+.CarLogo p span {
+    font-size: 15px;
+    background: #d8202e;
+    color: #fff;
+    padding: 0 3px;
+    margin: 0 4px;
+}
+
+.Buyed {
+    width: 270px;
+    height: 96px;
+    overflow: hidden;
+    margin: 12px auto 0 auto;
+}
+
+.Buyed li {
+    line-height: 32px;
+}
+
+.Buyed li h2, .Buyed li span, .Buyed li strong {
+    font-size: 13px;
+}
+
+.Buyed li h2 {
+    display: inline;
+}
+
+.Buyed li span {
+    padding-left: 8px;
+    color: #d8202e;
+}
+
+.Buyed li strong {
+    display: block;
+    font-weight: normal;
+    float: right;
+}
+
+.GoBuy {
+    margin-top: 10px;
+}
+
+.GoBuy a {
+    display: block;
+    width: 276px;
+    height: 37px;
+    font-size: 16px;
+    margin: 0 auto;
+    background: #f64a43;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 4px;
+}
+
+.CarBottom {
+    width: 100%;
+    position: relative;
+}
+
+.CarBottom dl {
+    margin-top: 14px;
+}
+
+.CarBottom dt {
+    width: 60px;
+    text-align: right;
+    line-height: 32px;
+    float: left;
+}
+
+.CarBottom dd {
+    width: 176px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #95d6ff;
+    margin: 0 4px;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+}
+
+.CarBottom dd a {
+    font-size: 14px;
+    color: #000;
+}
+
+.CarBottom dd a:hover {
+    text-decoration: underline;
+}
+
+.BuyNote {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    line-height: 32px;
+}
+
+.EnrollBuy {
+    width: 254px;
+    float: right;
+    padding: 20px 0;
+}
+
+.EnrollBuyFixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: 346px;
+    z-index: 3;
+}
+
+.EnrollBuy h2 {
+    width: 100%;
+    font-size: 18px;
+    color: #343434;
+    padding-left: 5px;
+}
+
+.EnrollBuy h2 span {
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    background: #f64a43;
+    margin-right: 6px;
+}
+
+.EnrollBuy ul {
+    padding: 0 15px;
+}
+
+.EnrollBuy li {
+    margin-top: 24px;
+    width: 100%;
+    height: 38px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.EnrollBuy li:after {
+    display: block;
+    content: "";
+    float: left;
+}
+
+.EnrollBuy li p {
+    width: 74px;
+    line-height: 38px;
+    float: left;
+    font-size: 15px;
+    color: #787878;
+}
+
+.EnrollBuy li p span {
+    color: #dc3b34;
+    padding-right: 6px;
+}
+
+.EnrollBuy li select, .EnrollBuy li input[type=text] {
+    box-sizing: border-box;
+    width: 148px;
+    height: 38px;
+    font-size: 15px;
+    float: left;
+}
+
+.EnrollBuy li input[type=text] {
+    padding: 0 8px;
+}
+
+.EnrollBuy li input[type=submit], .EnrollBuy li input[type=button] {
+    width: 224px;
+    height: 35px;
+    border: none;
+    background: #f64a43;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
+}

@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+#main .sideWrap {
+    width: 260px;
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+    position: relative;
+    background: url(../img/product/title_bg.png) repeat-y 156px 0;
+}
+
+#main .list {
+    width: 660px;
+    padding-left: 16px;
+    margin-top: 24px;
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+}
+
+.sideBg {
+    width: 260px;
+    height: 240px;
+    background: url(../img/product/title_bg1.png) no-repeat 156px bottom;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.title {
+    width: 260px;
+    background: url(../img/product/title_ul_bg.png) no-repeat 156px 0;
+    text-indent: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.title li {
+    height: 20px;
+    margin-bottom: 22px;
+    color: #1a5d96;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.title li span {
+    display: inline-block;
+    opacity: 0;
+    margin-left: 8px;
+    border: 4px solid #fff;
+}
+
+.title li:nth-of-type(1) {
+    padding-top: 40px;
+}
+
+.title .active, .title li:hover {
+    color: #0089fe;
+}
+
+.title .active span {
+    border-left: 4px solid #6cbbff;
+    opacity: 1;
+}
+
+.list1 h2, .list2 h2 {
+    height: 38px;
+    text-indent: 16px;
+    line-height: 38px;
+    font-size: 16px;
+    background: #f2f7fc;
+}
+
+.list1 p {
+    line-height: 24px;
+    padding-top: 14px;
+    margin-left: 10px;
+}
+
+.product1 {
+    margin-top: 18px;
+}
+
+.product1 li {
+    text-indent: 8px;
+}
+
+.product1 h4 {
+    background: url(../img/product/list_ul_bg.png) no-repeat 0 4px;
+    font-size: 14px;
+    margin: 24px 0 10px;
+}
+
+.product1 p {
+    background: url(../img/product/list_ul_bg.png) no-repeat 0 -14px;
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+    text-indent: 14px;
+}
+
+.main_function {
+    margin-top: 20px;
+}
+
+.main_function li {
+    margin-bottom: 14px;
+}
+
+.main_function h5 {
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+}
+
+.main_function p {
+    padding: 0;
+    margin: 0;
+    background: none;
+    text-indent: 8px;
+}
+
+.list2 ul {
+    margin-top: 20px;
+}
+
+.list2 li {
+    margin: 10px 0;
+}
+
+.list2 img {
+    width: 660px;
+}
+
+

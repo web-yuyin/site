@@ -1,0 +1,330 @@
+@charset "utf-8";
+/* CSS Document */
+
+#picTab, #WhyQQ, #main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#picTab .pic, #picTab .tabBtn, #picTab a, #WhyQQ ol {
+    position: absolute;
+}
+
+#picTab .pic li, #picTab img, #picTab .tabBtn, #WhyQQ ol {
+    width: 960px;
+}
+
+#picTab {
+    height: 284px;
+    overflow: hidden;
+    position: relative;
+}
+
+#picTab .pic {
+    width: 2880px;
+    top: 0;
+    left: 0;
+}
+
+#picTab .pic li {
+    float: left;
+    transition: all 0.4s;
+}
+
+#picTab img {
+    height: 284px;
+}
+
+#picTab a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    background: #000;
+    color: #fff;
+    top: 120px;
+    opacity: 0;
+    z-index: 3;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#picTab:hover a {
+    opacity: 0.4;
+}
+
+#picTab .hd {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 10;
+}
+
+#picTab .hd ul {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -45px;
+}
+
+#picTab .hd ul li {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 20%;
+    background: #fff;
+    color: #000;
+    margin: 0 5px;
+    font-size: 12px;
+    float: left;
+}
+
+#picTab .hd li.on {
+    background: #F30;
+    color: #fff;
+}
+
+#WhyQQ {
+    height: 280px;
+    background: url(../img/index/why_QQ_bg.png) repeat-x;
+    position: relative;
+}
+
+#WhyQQ .icno {
+    width: 180px;
+    height: 50px;
+    background: url(../img/index/inco.gif) no-repeat;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+#WhyQQ ol {
+    top: 56px;
+    left: 0;
+}
+
+#WhyQQ ol li {
+    width: 320px;
+    float: left;
+}
+
+#main {
+    overflow: hidden;
+}
+
+#main .content {
+    width: 710px;
+    background: #fff;
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+}
+
+.content div {
+    width: 668px;
+    margin: 20px 0 0 22px;
+}
+
+.content h3 {
+    font-size: 16px;
+}
+
+.content .h3_tail {
+    margin: 0;
+    width: 582px;
+    text-align: right;
+    background: url(../img/index/h3_tail.gif) repeat-x 0 2px;
+    float: right;
+    position: relative;
+    top: -20px;
+    color: #fff;
+}
+
+.content .h3_tail a {
+    width: 54px;
+    padding-left: 10px;
+    background: #fff;
+    color: #1a5d96;
+    z-index: 2;
+}
+
+.content .h3_tail a:hover {
+    text-decoration: underline;
+}
+
+.div1 ul {
+    width: 668px;
+}
+
+.div1 ul li:nth-of-type(2n) {
+    width: 266px;
+}
+
+.div1 ul li:nth-of-type(2n+1) {
+    width: 250px;
+    padding-right: 20px;
+}
+
+.div1 ul li {
+    padding-left: 66px;
+    margin: 12px 0;
+    float: left;
+}
+
+.div1 ul li h5 {
+    line-height: 34px;
+}
+
+.div1 ul li p {
+    line-height: 22px;
+}
+
+.div1 ul li:nth-of-type(1) {
+    background: url(../img/index/div1_li_bg1.png) no-repeat 0 16px;
+}
+
+.div1 ul li:nth-of-type(2) {
+    background: url(../img/index/div1_li_bg2.png) no-repeat 0 16px;
+}
+
+.div1 ul li:nth-of-type(3) {
+    background: url(../img/index/div1_li_bg1.png) no-repeat 0 -90px;
+}
+
+.div1 ul li:nth-of-type(4) {
+    background: url(../img/index/div1_li_bg2.png) no-repeat 0 -90px;
+}
+
+.div2, .div3 {
+    position: relative;
+    top: 12px;
+}
+
+.div2 ul, .div3 ul {
+    margin-top: 26px;
+}
+
+.div2 ul {
+    margin-top: 26px;
+}
+
+.div2 ul li {
+    width: 222px;
+    padding-bottom: 4px;
+    float: left;
+}
+
+.div2 li img {
+    padding-bottom: 10px;
+}
+
+.div2 li h5 {
+    line-height: 34px;
+    font-size: 14px;
+}
+
+.div2 li h5 a {
+    color: #197dcd;
+}
+
+.div2 li strong, .div2 li p {
+    line-height: 22px;
+}
+
+.div2 li strong {
+    color: #c12222;
+}
+
+.div2 li p {
+    width: 210px;
+}
+
+.div2 li p a {
+    color: #222222;
+}
+
+.div2 li h5 a:hover, .div2 li p:hover {
+    text-decoration: underline;
+}
+
+.div3 ul li {
+    width: 222px;
+    float: left;
+}
+
+.div3 .ad {
+    width: 668px;
+    margin: 0;
+}
+
+.ad img {
+    padding: 20px 0 16px;
+}
+
+.div4 ul {
+    margin-top: 20px;
+}
+
+.div4 ul li {
+    width: 166px;
+    float: left;
+    margin: 4px 0;
+}
+
+#main .side {
+    width: 250px;
+    background: #f7fafd;
+    padding-bottom: 10000px;
+    margin-bottom: -10000px;
+}
+
+#main .consult {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.consult .img1 {
+    margin-bottom: 24px;
+}
+
+.wrap {
+    margin: 20px 0 0 22px;
+}
+
+.wrap h3 {
+    font-size: 16px;
+    color: #222;
+    line-height: 58px;
+}
+
+.wrap a {
+    display: block;
+    width: 210px;
+    line-height: 26px;
+    color: #197ccc;
+}
+
+.wrap a:hover {
+    color: #C03;
+}
+
+.side_ad {
+    padding-top: 28px;
+}
+
+.side_ad img {
+    padding-bottom: 10px
+}

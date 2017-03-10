@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Reset */
+body, h1, h2, h3, h4, h5, p, dl, dd, ul, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+body {
+    font-family: Arial "微软雅黑";
+}
+
+/* End CSS Reset */
+
+.box {
+    width: 100%;
+    position: relative;
+}
+
+.top {
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.top_text {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.top_text p {
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.top_text .p1 {
+    width: 320px;
+    float: left;
+}
+
+.top_text .login {
+    width: 160px;
+    text-align: center;
+    float: right;
+}
+
+.top_text .login a {
+    color: #fff;
+    margin-left: 8px;
+    text-decoration: underline;
+}
+
+.pic_list {
+    width: 100%;
+    height: 850px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pic_list ul {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pic_list li {
+    width: 100%;
+    height: 850px;
+    float: left;
+    background-size: cover;
+    background-position: center 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pic_list .logo_img {
+    width: 100%;
+    margin: 120px auto 0;
+    text-align: center;
+    opacity: 0;
+}
+
+.pic_list .logo_img img {
+    display: block;
+    margin: 30px auto 0;
+}
+
+.pic_list .download {
+    width: 350px;
+    margin: 30px auto 0;
+}
+
+.pic_list .download .btn {
+    width: 250px;
+    float: left;
+}
+
+.pic_list .download .btn a {
+    display: block;
+    width: 240px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #551F00;
+    font-weight: bold;
+    background-color: #fff;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    border-radius: 6px;
+}
+
+.pic_list .download .btn a:hover {
+    background-color: rgba(42, 31, 0, 0.2);
+}
+
+.pic_list .download a img {
+    vertical-align: middle;
+    margin: -4px 6px 0 0;
+}
+
+.pic_list .download .link_img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    background: url(../images/qrcode.png) no-repeat;
+    float: left;
+}
+
+.move_btn {
+    position: absolute;
+    top: 650px;
+    left: 50%;
+    margin-left: -375px;
+    z-index: 3;
+    width: 750px;
+    height: 100px;
+    overflow: hidden;
+    background: url(../images/dot.png) repeat-x 0 32px;
+    overflow: hidden;
+}
+
+.line {
+    width: 150px;
+    height: 2px;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background: #fff;
+}
+
+.move_btn ul {
+    width: 600px;
+    position: absolute;
+    top: 8px;
+    left: 80px;
+    z-index: 2;
+}
+
+.move_btn ul li {
+    width: 150px;
+    text-align: center;
+    float: left;
+}
+
+.move_btn li p {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: 3;
+}
+
+.footer p {
+    width: 100%;
+    line-height: 50px;
+    font-size: 14px;
+    color: #FFFBF0;
+    text-align: center;
+}
+
+.footer p span {
+    padding-left: 14px;
+}
+
+.footer p span a {
+    padding-right: 6px;
+    color: #FFFBF0;
+}
+
+.footer p span a:hover {
+    color: #2A1FFF;
+}
+
+.footer p img {
+    vertical-align: middle;
+}

@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="对关键词描述">
+    <title>图片上传</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: '微软雅黑';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrap {
+            width: 90%;
+            min-width: 1200px;
+            height: 600px;
+            overflow-y: auto;
+            margin: 20px auto 0;
+            position: relative;
+            border: 2px solid #0F6;
+            border-radius: 4px;
+        }
+
+        .file {
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            text-align: center;
+        }
+
+        .uplaod {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 0 auto 10px;
+            background: #09F url(images/img.png) no-repeat 20px center;
+            border: 1px solid #00F;
+            font-size: 24px;
+            text-indent: 30px;
+            color: #fff;
+            line-height: 50px;
+            position: relative;
+            border-radius: 4px;
+        }
+
+        .uplaod input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .file p {
+            line-height: 32px;
+            color: #ccc;
+        }
+
+        .file p a {
+            color: #0CC;
+        }
+
+        .file p a:hover {
+            color: #3F9;
+        }
+
+        .wrap .upImg, .wrap .last {
+            width: 10%;
+            min-width: 120px;
+            height: 120px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 8px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .wrap .upImg div {
+            width: 100%;
+            height: 80px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .wrap .last {
+            text-align: center;
+            position: relative;
+        }
+
+        .wrap .last input {
+            width: 100%;
+            height: 120px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .wrap .last div {
+            height: 50px;
+            background: url(images/img.png) no-repeat center center;
+            background-size: 30px;
+        }
+
+        .wrap .upImg p {
+			font-size:12px;
+            width: 100%;
+            line-height: 22px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap clearfix">
+    <div class="file">
+        <a class="uplaod" href="javascript:">
+            <span>选择照片</span>
+            <input type="file" value="" multiple/>
+        </a>
+        <p>按住Ctrl可多选照片</p>
+    </div>
+</div>
+</body>
+
+<script>
+    upLaod($('.wrap'));
+
+    function upLaod(obj) {
+        obj.on('change', obj.find(':file'), function () {
+            var _this = obj.find(':file').get(0);
+            var num = _this.files.length;
+            var str = '';
+            var last = "<div class='last'><div></div><p>继续添加图片</p><input type='file' multiple/></div>";
+            obj.find('.file').remove();
+            obj.find('.last').remove();
+            for (var i = 0; i < num; i++) {
+                var url = window.URL.createObjectURL(_this.files[i]);
+                var text = _this.files[i].name;
+                str += "<div class='upImg'><div style='background-image:url(" + url + ");'></div><p>" + text + "</p></div>";
+            }
+            obj.append(str + last);
+        });
+    }
+
+</script>
+</html>
